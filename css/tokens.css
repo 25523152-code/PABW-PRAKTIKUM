@@ -1,0 +1,33 @@
+/* D — Design token: nilai mentah + token peran */
+:root {
+  --raw-blue-700: #1d4ed8;
+  --raw-blue-500: #3b82f6;
+  --raw-blue-100: #dbeafe;
+  --raw-slate-950: #0f172a;
+  --raw-slate-700: #334155;
+  --raw-slate-500: #64748b;
+  --raw-slate-100: #f1f5f9;
+  --raw-white: #ffffff;
+  --raw-green-700: #166534;
+  --raw-red-700: #b91c1c;
+
+  --warna-latar: var(--raw-white);
+  --warna-permukaan: var(--raw-slate-100);
+  --warna-teks: var(--raw-slate-950);
+  --warna-teks-lembut: var(--raw-slate-700);
+  --warna-teks-muted: var(--raw-slate-500);
+  --warna-utama: var(--raw-blue-700);
+  --warna-utama-hover: #1e40af;
+  --warna-border: #cbd5e1;
+  --warna-fokus: var(--raw-blue-500);
+  --warna-sukses: var(--raw-green-700);
+  --warna-error: var(--raw-red-700);
+
+  --radius-kecil: 0.4rem;
+  --radius-sedang: 0.8rem;
+  --bayangan: 0 4px 16px rgb(15 23 42 / 0.08);
+  --jarak-1: 0.5rem;
+  --jarak-2: 1rem;
+  --jarak-3: 1.5rem;
+  --jarak-4: 2rem;
+}

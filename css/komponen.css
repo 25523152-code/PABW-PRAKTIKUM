@@ -1,0 +1,85 @@
+/* G — Komponen, form, fokus, dan isian tidak sah */
+fieldset {
+  margin: 0;
+  padding: var(--jarak-3);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-sedang);
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+}
+
+form p {
+  margin-bottom: var(--jarak-2);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  color: var(--warna-teks);
+  background: var(--warna-latar);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-kecil);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  color: var(--raw-white);
+  background: var(--warna-utama);
+  border: 0;
+  border-radius: var(--radius-kecil);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--warna-utama-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--warna-fokus);
+  outline-offset: 3px;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--warna-error);
+}
+
+details {
+  margin-bottom: var(--jarak-2);
+  padding: var(--jarak-2);
+  background: var(--warna-permukaan);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-kecil);
+}
+
+details:last-child {
+  margin-bottom: 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+summary::marker {
+  color: var(--warna-utama);
+}

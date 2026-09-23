@@ -1,0 +1,31 @@
+/* H — Tema gelap dan tombol pengalih */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --warna-latar: #0f172a;
+    --warna-permukaan: #1e293b;
+    --warna-teks: #f8fafc;
+    --warna-teks-lembut: #e2e8f0;
+    --warna-teks-muted: #cbd5e1;
+    --warna-utama: #93c5fd;
+    --warna-utama-hover: #bfdbfe;
+    --warna-border: #475569;
+    --warna-fokus: #facc15;
+    --warna-sukses: #86efac;
+    --warna-error: #fca5a5;
+    --bayangan: 0 4px 16px rgb(0 0 0 / 0.25);
+  }
+
+  button {
+    color: #0f172a;
+    background: var(--warna-utama);
+  }
+
+  button:hover {
+    background: var(--warna-utama-hover);
+  }
+}
+
+/*
+  Tombol pengalih dapat ditambahkan pada pengembangan berikutnya.
+  Saat ini tema gelap mengikuti preferensi sistem melalui prefers-color-scheme.
+*/

@@ -1,0 +1,48 @@
+/* E — Reset ringan, box-sizing, dan tipografi */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: var(--warna-latar);
+  color: var(--warna-teks);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--warna-utama);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: var(--jarak-2);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}

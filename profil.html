@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+  Berkas ini dikembangkan dari starter yang diberikan.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Profil Zidan Fawaza Syahroni — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+</head>
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <header class="kepala">
+    <h1>Zidan Fawaza Syahroni</h1>
+    <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web dan aplikasi.</p>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="utama">
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+        <img src="media/foto-profil.jpg"
+             alt="Foto profil Zidan Fawaza Syahroni memakai kemeja putih."
+             width="480" height="480" loading="lazy">
+        <figcaption>Foto profil Zidan Fawaza Syahroni.</figcaption>
+      </figure>
+
+      <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+         Saya tertarik pada pengembangan web dan pemrograman karena saya senang
+         melihat hasil dari proses membuat sebuah aplikasi.</p>
+
+      <table>
+        <caption>Kegiatan yang saya ikuti semester ini</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Peran</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Praktikum PABW</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Pengembangan proyek SIMPROM</th>
+            <td>Pengembang</td>
+            <td><time datetime="2026">2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Pembelajaran pemrograman Java</th>
+            <td>Mahasiswa</td>
+            <td><time datetime="2026">2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+      <ul>
+        <li>Halaman Kelas Terbuka Kampus — praktikum P03, HTML semantik dan form.</li>
+        <li>SIMPROM — proyek sistem manajemen produksi mebel berbasis JavaFX, 2026.</li>
+        <li>Latihan pemrograman Java — tugas dan praktikum Algoritma &amp; Struktur Data, 2026.</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi saya</h2>
+      <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data pengirim</legend>
+
+          <p>
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" type="text"
+                   autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="nim">NIM</label>
+            <input id="nim" name="nim" type="text" inputmode="numeric"
+                   pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+            <span id="nim-bantuan">Delapan digit angka, contoh 105230102.</span>
+          </p>
+
+          <p>
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          </p>
+
+          <button type="submit">Kirim</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="faq">
+      <h2>Pertanyaan tentang saya</h2>
+      <details>
+        <summary>Apa bidang yang sedang saya pelajari?</summary>
+        <p>Saya sedang mempelajari pemrograman, pengembangan web, struktur data, dan pembuatan aplikasi.</p>
+      </details>
+      <details>
+        <summary>Apa yang ingin saya kembangkan?</summary>
+        <p>Saya ingin meningkatkan kemampuan membuat antarmuka yang rapi, mudah digunakan, dan mudah dipahami.</p>
+      </details>
+    </section>
+
+    <section id="perjalanan">
+      <h2>Lini masa belajar</h2>
+      <ol>
+        <li><time datetime="2026-01">2026</time> — mulai memperdalam dasar pemrograman dan struktur data.</li>
+        <li><time datetime="2026-07">2026</time> — mengembangkan proyek SIMPROM dengan JavaFX.</li>
+        <li><time datetime="2026-09">2026</time> — mempelajari HTML semantik, CSS, aksesibilitas, dan design token.</li>
+      </ol>
+    </section>
+
+    <section id="keahlian">
+      <h2>Hal yang sedang dipelajari</h2>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Menyusun struktur halaman web yang semantik dan mudah diakses.</dd>
+        <dt>CSS</dt>
+        <dd>Mengatur tampilan halaman menggunakan layout, komponen, dan design token.</dd>
+        <dt>Java</dt>
+        <dd>Membangun program dan memahami konsep pemrograman berorientasi objek.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <p>Zidan Fawaza Syahroni · 25523152 · <time datetime="2026">2026</time></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* F — Layout */
+.kepala {
+  padding: var(--jarak-3);
+  background: var(--warna-permukaan);
+  border-bottom: 1px solid var(--warna-border);
+}
+
+.kepala h1 {
+  margin-bottom: var(--jarak-1);
+}
+
+.tagline {
+  color: var(--warna-teks-lembut);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--jarak-2);
+  margin: var(--jarak-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-kecil);
+}
+
+main {
+  width: min(100% - 2rem, 960px);
+  margin: 0 auto;
+  padding: var(--jarak-4) 0;
+}
+
+main > section {
+  margin-bottom: var(--jarak-4);
+  padding: var(--jarak-3);
+  background: var(--warna-latar);
+  border: 1px solid var(--warna-border);
+  border-radius: var(--radius-sedang);
+  box-shadow: var(--bayangan);
+}
+
+.foto {
+  max-width: 480px;
+  margin: 0 auto var(--jarak-3);
+  text-align: center;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-sedang);
+}
+
+figcaption {
+  margin-top: var(--jarak-1);
+  color: var(--warna-teks-muted);
+}
+
+table {
+  width: 100%;
+  margin-top: var(--jarak-3);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid var(--warna-border);
+  text-align: left;
+}
+
+caption {
+  margin-bottom: var(--jarak-1);
+  font-weight: 700;
+  text-align: left;
+}
+
+#karya ul,
+#perjalanan,
+#keahlian,
+#faq {
+  margin-bottom: 0;
+}
+
+#perjalanan ol {
+  padding-left: 1.5rem;
+}
+
+#keahlian dl {
+  margin: 0;
+}
+
+#keahlian dt {
+  margin-top: var(--jarak-2);
+  font-weight: 700;
+  color: var(--warna-utama);
+}
+
+#keahlian dt:first-child {
+  margin-top: 0;
+}
+
+#keahlian dd {
+  margin: 0.25rem 0 0;
+  color: var(--warna-teks-lembut);
+}
+
+.kaki {
+  padding: var(--jarak-3);
+  text-align: center;
+  background: var(--warna-permukaan);
+  border-top: 1px solid var(--warna-border);
+}
+
+.kaki p {
+  margin: 0;
+  color: var(--warna-teks-lembut);
+}
+
+@media (min-width: 720px) {
+  .kepala {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--jarak-3);
+  }
+
+  .kepala nav ul {
+    margin-top: 0;
+  }
+}
