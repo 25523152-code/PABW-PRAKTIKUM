@@ -1,0 +1,142 @@
+/* Kerangka halaman: grid tiga baris. Tinggi memakai dvh, vh sebagai cadangan.
+   Kolom dibuat minmax(0, 1fr) agar isi lebar tidak melebarkan halaman. */
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.navbar,
+.isi,
+.kaki {
+  width: min(92%, 70rem);
+  justify-self: center;
+}
+
+/* Navbar: flex satu baris, jarak lewat gap */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__judul {
+  flex: 1;
+  min-width: 0;
+}
+
+.navbar__judul h1 {
+  font-size: var(--text-xl);
+  overflow-wrap: anywhere;
+}
+
+.tagline {
+  font-size: var(--text-sm);
+}
+
+.navbar nav {
+  flex: none;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Isi: dua kolom (sidebar tetap, konten lentur) dengan area bernama */
+.isi {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "sisi utama"
+    "sisi bawah";
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+}
+
+.sisi {
+  grid-area: sisi;
+}
+
+.utama {
+  grid-area: utama;
+  min-width: 0;
+  display: grid;
+  gap: var(--section-gap);
+  align-content: start;
+}
+
+.bawah {
+  grid-area: bawah;
+  min-width: 0;
+}
+
+/* Menu samping: flex kolom, sumbu utama vertikal */
+.menu-samping {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.menu-samping a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu-samping a:hover {
+  background: var(--color-primary-soft);
+}
+
+.kaki {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.kaki p {
+  font-size: var(--text-sm);
+}
+
+/* Layar sempit: satu kolom, menu atas disembunyikan karena menu ada di sidebar */
+@media (max-width: 48rem) {
+  .navbar nav {
+    display: none;
+  }
+
+  .isi {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "sisi"
+      "utama"
+      "bawah";
+    gap: var(--space-4);
+  }
+
+  .menu-samping {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
