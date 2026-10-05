@@ -16,7 +16,11 @@ Folder: `worksheet-p8/` (berisi `profil.html`, berkas CSS dari Pertemuan 6, dan 
 - Draf isian worksheet (lembar B.4, D.4, E.5, F, dan Lampiran B).
 
 **Saya kerjakan sendiri:**
-- <!-- ISI SENDIRI, tulis apa adanya. Contoh: menyambungkan skrip ke profil.html, menjalankan lewat Live Server, memeriksa hasil di Console, memperagakan tiga galat dan mengambil tangkapan layar, menyesuaikan data (keahlian dan proyek) dengan data saya, mempelajari dan bisa menjelaskan setiap baris kode, commit dan push ke GitHub. -->
+- Menghubungkan file `js/app.js` dengan `profil.html`
+- Menjalankan project menggunakan Live Server.
+- Memperbaiki error yang ditemukan saat menjalankan program.
+- Push file ke GitHub.
+- Mencoba `map`, `filter`, dan `find` pada data proyek.
 
 **Catatan:** Saya sudah membaca seluruh kode di `js/app.js` dan bisa menjelaskan setiap barisnya.
 <!-- Hapus kalimat di atas kalau belum benar. -->
