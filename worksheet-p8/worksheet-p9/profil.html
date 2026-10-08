@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+  PROFIL — PABW 2026/2027 — Pertemuan 5
+  Lanjutan Pertemuan 4: isi, token, dan tema tetap; yang berubah hanya
+  susunan. Kerangka memakai grid, navbar dan isi kartu memakai flexbox.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Profil Zidan Fawaza Syahroni — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/responsif.css">
+</head>
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <div class="page">
+
+    <header class="navbar">
+      <div class="navbar__judul">
+        <h1>Zidan Fawaza Syahroni</h1>
+        <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web dan aplikasi.</p>
+      </div>
+
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#karya">Karya</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <label class="pengalih-tema">
+        <input id="tema-manual" type="checkbox">
+        <span>Mode gelap</span>
+      </label>
+    </header>
+
+    <div class="isi">
+
+      <aside class="sisi">
+        <nav aria-label="Menu halaman">
+          <ul class="menu-samping">
+            <li><a href="#tentang">Tentang saya</a></li>
+            <li><a href="#karya">Karya saya</a></li>
+            <li><a href="#faq">Pertanyaan</a></li>
+            <li><a href="#perjalanan">Lini masa belajar</a></li>
+            <li><a href="#kemampuan">Hal yang dipelajari</a></li>
+            <li><a href="#kontak">Hubungi saya</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="utama" id="utama">
+
+        <section class="kartu" id="tentang">
+          <h2>Tentang saya</h2>
+
+          <figure class="foto">
+            <img src="media/foto-profil.jpg"
+                 alt="Foto diri Zidan Fawaza Syahroni."
+                 width="480" height="480" loading="lazy">
+            <figcaption>Foto profil Zidan Fawaza Syahroni.</figcaption>
+          </figure>
+
+          <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia.
+             Saya tertarik pada pengembangan web dan aplikasi, terutama bagaimana
+             tampilan yang sederhana dapat membuat sebuah sistem lebih mudah digunakan.</p>
+
+          <div class="tabel-gulir">
+            <table>
+              <caption>Kegiatan yang saya ikuti semester ini</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Kegiatan</th>
+                  <th scope="col">Peran</th>
+                  <th scope="col">Waktu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Praktikum PABW</th>
+                  <td>Peserta</td>
+                  <td><time datetime="2026-09">September 2026</time></td>
+                </tr>
+                <tr>
+                  <th scope="row">Algoritma &amp; Struktur Data</th>
+                  <td>Mahasiswa</td>
+                  <td><time datetime="2026">2026</time></td>
+                </tr>
+                <tr>
+                  <th scope="row">Pengembangan aplikasi</th>
+                  <td>Peserta</td>
+                  <td><time datetime="2026">2026</time></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="blok" id="karya">
+          <h2>Karya saya</h2>
+          <div id="filter" aria-label="Filter proyek">
+            <button type="button" data-kategori="semua" class="aktif">Semua</button>
+            <button type="button" data-kategori="web">Web</button>
+            <button type="button" data-kategori="data">Data</button>
+          </div>
+          <ul id="daftar" class="galeri"></ul>
+          <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+        </section>
+
+        <div class="galeri">
+
+          <section class="kartu" id="faq">
+            <h2>Pertanyaan tentang saya</h2>
+            <div class="daftar-tanya">
+              <details>
+                <summary>Apa yang sedang saya pelajari?</summary>
+                <p>Saya sedang mempelajari pengembangan web, pemrograman, dan cara membuat antarmuka yang mudah digunakan.</p>
+              </details>
+              <details>
+                <summary>Apa tujuan saya belajar web?</summary>
+                <p>Saya ingin memahami proses membuat halaman web dari struktur HTML sampai tampilan CSS yang rapi dan responsif.</p>
+              </details>
+            </div>
+          </section>
+
+          <section class="kartu" id="perjalanan">
+            <h2>Lini masa belajar</h2>
+            <ol class="timeline">
+              <li><strong>2026 — Dasar pemrograman:</strong> memperkuat konsep algoritma dan pemrograman.</li>
+              <li><strong>2026 — Pengembangan web:</strong> belajar HTML, CSS, aksesibilitas, dan design token.</li>
+              <li><strong>2026 — Pengembangan aplikasi:</strong> mengembangkan latihan aplikasi dan proyek kuliah.</li>
+            </ol>
+          </section>
+
+          <section class="kartu" id="kemampuan">
+            <h2>Hal yang sedang dipelajari</h2>
+            <dl>
+              <dt>HTML</dt>
+              <dd>Menyusun struktur halaman yang semantik dan mudah diakses.</dd>
+              <dt>CSS</dt>
+              <dd>Membuat tampilan responsif dengan flexbox, grid, token, dan tema.</dd>
+              <dt>Java</dt>
+              <dd>Mempelajari pemrograman berorientasi objek dan pengembangan aplikasi.</dd>
+            </dl>
+          </section>
+
+        </div>
+
+      </main>
+
+      <section class="kartu bawah" id="kontak">
+        <h2>Hubungi saya</h2>
+        <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Data pengirim</legend>
+
+            <p>
+              <label for="nama">Nama lengkap</label>
+              <input id="nama" name="nama" type="text"
+                     autocomplete="name" aria-describedby="galat-nama" required>
+              <span id="galat-nama" class="pesan-galat" aria-live="polite"></span>
+            </p>
+
+            <p>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email"
+                     autocomplete="email" aria-describedby="galat-email" required>
+              <span id="galat-email" class="pesan-galat" aria-live="polite"></span>
+            </p>
+
+            <p>
+              <label for="nim">NIM</label>
+              <input id="nim" name="nim" type="text" inputmode="numeric"
+                     pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+              <span id="nim-bantuan">Delapan digit angka, contoh 25523152.</span>
+              <span id="galat-nim" class="pesan-galat" aria-live="polite"></span>
+            </p>
+
+            <p>
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" rows="4" aria-describedby="galat-pesan" required></textarea>
+              <span id="galat-pesan" class="pesan-galat" aria-live="polite"></span>
+            </p>
+
+            <button type="submit" disabled>Kirim</button>
+          </fieldset>
+        </form>
+      </section>
+
+    </div>
+
+    <footer class="kaki">
+      <p>Zidan Fawaza Syahroni · 25523152 · <time datetime="2026">2026</time></p>
+    </footer>
+
+  </div>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
+  <script>
+    // Pengalih tema: kotak centang memaksa terang/gelap dua arah,
+    // dan pilihan pengguna diingat lewat localStorage.
+    (function () {
+      var kotak = document.getElementById('tema-manual');
+      var akar = document.documentElement;
+
+      function terapkan(gelap) {
+        akar.setAttribute('data-theme', gelap ? 'dark' : 'light');
+        kotak.checked = gelap;
+      }
+
+      var tersimpan = null;
+      try { tersimpan = localStorage.getItem('tema'); } catch (e) {}
+
+      var sistemGelap = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      terapkan(tersimpan ? tersimpan === 'dark' : sistemGelap);
+
+      kotak.addEventListener('change', function () {
+        terapkan(kotak.checked);
+        try { localStorage.setItem('tema', kotak.checked ? 'dark' : 'light'); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
