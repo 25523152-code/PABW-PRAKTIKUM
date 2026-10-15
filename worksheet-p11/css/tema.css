@@ -1,0 +1,60 @@
+/* Tema otomatis mengikuti sistem */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--gray-900);
+    --color-fg: var(--gray-50);
+    --color-surface: #172033;
+    --color-border: #64748B;
+    --color-primary: #93C5FD;
+    --color-primary-soft: #1E3A5F;
+    --color-danger: #FCA5A5;
+    --color-focus: #FDE047;
+  }
+}
+
+/* Toggle manual: diletakkan setelah media query agar pilihan pengguna menang */
+html:has(#tema-manual:checked) {
+  --color-bg: var(--gray-900);
+  --color-fg: var(--gray-50);
+  --color-surface: #172033;
+  --color-border: #64748B;
+  --color-primary: #93C5FD;
+  --color-primary-soft: #1E3A5F;
+  --color-danger: #FCA5A5;
+  --color-focus: #FDE047;
+}
+
+html:has(#tema-manual:checked) .pengalih-tema {
+  color: var(--color-fg);
+}
+
+/* Paksa terang atau gelap lewat atribut data-theme pada <html>,
+   diatur oleh skrip kecil di profil.html. Diletakkan paling akhir
+   supaya menang atas prefers-color-scheme dan :has() di atas, dan
+   supaya kotak centang bisa memaksa KEMBALI ke terang walau
+   perangkat sedang bertema gelap (sebelumnya tidak bisa). */
+html[data-theme="light"] {
+  --color-bg: var(--gray-50);
+  --color-fg: var(--gray-900);
+  --color-surface: var(--white);
+  --color-border: var(--gray-300);
+  --color-primary: var(--blue-700);
+  --color-primary-soft: var(--blue-100);
+  --color-danger: var(--red-700);
+  --color-focus: var(--blue-500);
+}
+
+html[data-theme="dark"] {
+  --color-bg: var(--gray-900);
+  --color-fg: var(--gray-50);
+  --color-surface: #172033;
+  --color-border: #64748B;
+  --color-primary: #93C5FD;
+  --color-primary-soft: #1E3A5F;
+  --color-danger: #FCA5A5;
+  --color-focus: #FDE047;
+}
+
+html[data-theme] .pengalih-tema {
+  color: var(--color-fg);
+}
